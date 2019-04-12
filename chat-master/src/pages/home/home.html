@@ -1,0 +1,21 @@
+<ion-content #list padding cache-view="false">
+  <div class="login" (click)="goToLogin()">
+    <h1 class="TextLogin">Cerrar Sesion</h1>
+  </div>
+  
+  <div class="login" (click)="goToPerfil()">
+    <h1 class="TextLogin">Perfil</h1>
+  </div>
+  
+  
+  <ion-list>
+    <ion-item class="friend" (click)="goToChat()" *ngFor= "let mensaje of message">
+      <ion-avatar item-start class="friend-img">
+        <img src="assets/imgs/1.png">
+      </ion-avatar>
+      <h1 class="friend-name">{{mensaje.nombre}}</h1>
+      <h2 class="friend-message">{{mensaje.mensaje}}</h2>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
